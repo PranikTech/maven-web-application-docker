@@ -63,6 +63,7 @@ pipeline{
                    sh "ssh -o StrictHostKeyChecking=no ubuntu@18.132.243.9 docker rm -f mavenwebapplication || true"
                    sh "ssh -o StrictHostKeyChecking=no ubuntu@18.132.243.9 docker run -d --name mavenwebapplication -p 8080:8080 sourabh054/dockercicd:${buildNumber}"
                 }
+                
             }
         }
     }
