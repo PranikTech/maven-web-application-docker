@@ -46,5 +46,13 @@ pipeline{
                 sh 'docker push sourabh054/dockercicd:${buildNumber}'
             }
         }
+        stage('Remove Docker Images from local server')
+        {
+            steps()
+            {
+               sh 'docker rmi sourabh054/dockercicd:${buildNumber}'
+            }
+            
+        }
     }
 }
